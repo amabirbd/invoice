@@ -1,0 +1,12 @@
+{
+    "customers": {
+        "name": "Harvey Morrision",
+        "address": "hauseneidorf-06458, Sachsen Anhel, Germany",
+
+    },
+    "Locations": [
+        "Location One",
+        "Location Two",
+        "Location Three"
+    ]
+}
