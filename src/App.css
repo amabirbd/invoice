@@ -43,13 +43,19 @@ li {
   margin-top: 20px;
   background-color: white;
 }
-.col1 {
+/* .col1 {
   border: 1px solid black;
+  
+} */
+
+.form-field {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  padding: 2px;
+  margin-top: 20px;
 
+}
 .new-invoice-text {
   text-align: left;
   padding: 10px;
