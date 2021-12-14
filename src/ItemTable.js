@@ -11,6 +11,7 @@ import { ItemContext } from "./App";
 export default function ItemTable() {
   const itemContext = React.useContext(ItemContext);
   console.log("item context: ", itemContext.items);
+  const items = itemContext.items;
 
   return (
     <TableContainer component={Paper}>
@@ -26,22 +27,24 @@ export default function ItemTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          hello
-          <h2>{itemContext.items}</h2>
-          {/* {rows.map((row) => (
+          {/* {items.map((item) => {
+            <li>{item}</li>;
+          })} */}
+
+          {items.map((item) => (
             <TableRow
-              key={row.name}
+              key={item}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {row.name}
+              <TableCell component="th" scope="item">
+                {item}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              {/* <TableCell align="right">{items.calories}</TableCell>
+              <TableCell align="right">{items.fat}</TableCell>
+              <TableCell align="right">{items.carbs}</TableCell>
+              <TableCell align="right">{items.protein}</TableCell> */}
             </TableRow>
-          ))} */}
+          ))}
         </TableBody>
       </Table>
     </TableContainer>

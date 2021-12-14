@@ -21,18 +21,17 @@ export default function SearchBar() {
           myOptions.push(res[i].title);
         }
         setMyOptions(myOptions);
-        itemContext.itemDispatch({ type: "addItem", payload: value });
       });
   }, []);
 
   return (
     <div>
-      <div>{`value: ${value !== null ? `'${value}'` : "null"}`}</div>
       <br />
       <Autocomplete
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
+          itemContext.itemDispatch({ type: "addItem", payload: value });
         }}
         id="controllable-states-demo"
         options={myOptions}

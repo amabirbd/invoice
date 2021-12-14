@@ -9,10 +9,10 @@ export const ItemContext = React.createContext();
 
 const initialState = [];
 const reducer = (state, action) => {
-  switch (action) {
+  switch (action.type) {
     case "addItem":
       // return [...state, action];
-      return [action.payload, ...state];
+      return (state = [...state, action.payload]);
     case "deleteItem":
       return state;
     default:
