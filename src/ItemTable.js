@@ -31,20 +31,24 @@ export default function ItemTable() {
             <li>{item}</li>;
           })} */}
 
-          {items.map((item) => (
-            <TableRow
-              key={item}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="item">
-                {item}
-              </TableCell>
-              {/* <TableCell align="right">{items.calories}</TableCell>
+          {items.map(
+            (item) =>
+              item !== null &&
+              item !== undefined && (
+                <TableRow
+                  key={item}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="item">
+                    {item}
+                  </TableCell>
+                  {/* <TableCell align="right">{items.calories}</TableCell>
               <TableCell align="right">{items.fat}</TableCell>
               <TableCell align="right">{items.carbs}</TableCell>
               <TableCell align="right">{items.protein}</TableCell> */}
-            </TableRow>
-          ))}
+                </TableRow>
+              )
+          )}
         </TableBody>
       </Table>
     </TableContainer>

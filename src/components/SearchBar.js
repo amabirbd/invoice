@@ -6,7 +6,7 @@ import { ItemContext } from "../App";
 export default function SearchBar() {
   const [myOptions, setMyOptions] = useState([]);
 
-  const [value, setValue] = React.useState(myOptions[0]);
+  const [value, setValue] = React.useState();
 
   const itemContext = useContext(ItemContext);
 
